@@ -54,10 +54,13 @@ const userSchema = new mongoose.Schema(
       default: "customer",
     },
     addresses: { type: [addressSchema], default: [] },
+<<<<<<< HEAD
     // Yuz orqali tasdiqlash: faqat 128 o'lchamli "imzo" saqlanadi, rasm saqlanmaydi
     faceDescriptor: { type: [Number], default: undefined, select: false },
     faceEnrolledAt: { type: Date, default: null },
     faceRequiredForOrders: { type: Boolean, default: false },
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
     isBlocked: {
       type: Boolean,
       default: false,

@@ -33,9 +33,12 @@ app.use("/api/attendance", require("./routes/attendanceRoutes"));
 app.use("/api/settings", require("./routes/settingsRoutes"));
 app.use("/api/debts", require("./routes/debtRoutes"));
 app.use("/api/addresses", require("./routes/addressRoutes"));
+<<<<<<< HEAD
 app.use("/api/payments", require("./routes/paymentRoutes"));
 app.use("/api/face", require("./routes/faceRoutes"));
 app.use("/api/assistant", require("./routes/assistantRoutes"));
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
 
 app.get("/", (req, res) => {
   res.json({ success: true, message: "Internet-do'kon backend API ishlamoqda" });
@@ -46,6 +49,9 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
+<<<<<<< HEAD
   require("./jobs/paymentExpiry").start(); // to'lanmagan onlayn buyurtmalarni avtomatik bekor qilish
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
   console.log(`Server ${PORT}-portda ishga tushdi`);
 });

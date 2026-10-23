@@ -30,8 +30,11 @@ const registerUser = asyncHandler(async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
+<<<<<<< HEAD
       phone: user.phone,
       avatar: user.avatar,
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
       role: user.role,
     },
     token: generateToken(user._id),
@@ -62,8 +65,11 @@ const loginUser = asyncHandler(async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
+<<<<<<< HEAD
       phone: user.phone,
       avatar: user.avatar,
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
       role: user.role,
     },
     token: generateToken(user._id),
@@ -131,7 +137,10 @@ const googleAuth = asyncHandler(async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
+<<<<<<< HEAD
       phone: user.phone,
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
       avatar: user.avatar,
       role: user.role,
     },
@@ -146,6 +155,7 @@ const getMe = asyncHandler(async (req, res) => {
   res.json({ success: true, user: req.user });
 });
 
+<<<<<<< HEAD
 // @desc    Profilni yangilash (ism, telefon, rasm)
 // @route   PATCH /api/auth/profile
 // @access  Private
@@ -209,3 +219,6 @@ const changePassword = asyncHandler(async (req, res) => {
 });
 
 module.exports = { registerUser, loginUser, googleAuth, getMe, updateProfile, changePassword };
+=======
+module.exports = { registerUser, loginUser, googleAuth, getMe };
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4

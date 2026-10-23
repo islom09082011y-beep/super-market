@@ -65,6 +65,7 @@ const orderSchema = new mongoose.Schema(
       slot: { type: String, default: "" }, // 09:00-12:00 ...
     },
     statusHistory: { type: [historySchema], default: [] },
+<<<<<<< HEAD
     cancelledBy: { type: String, enum: ["", "customer", "staff", "system"], default: "" },
     staffNote: { type: String, default: "", maxlength: 500 }, // faqat xodimlar ko'radi
     isUrgent: { type: Boolean, default: false },
@@ -72,6 +73,9 @@ const orderSchema = new mongoose.Schema(
     paymentProvider: { type: String, enum: ["", "click", "payme", "sandbox", "manual"], default: "" },
     paidAt: { type: Date, default: null },
     paymentExpiresAt: { type: Date, default: null }, // onlayn to'lov kutish muddati
+=======
+    cancelledBy: { type: String, enum: ["", "customer", "staff"], default: "" },
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
     paymentMethod: {
       type: String,
       enum: ["naqd", "karta", "click", "payme", "nasiya"],
