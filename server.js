@@ -29,23 +29,13 @@ app.use("/api/coupons", require("./routes/couponRoutes"));
 app.use("/api/orders", require("./routes/orderRoutes"));
 app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 app.use("/api/announcements", require("./routes/announcementRoutes"));
-app.use("/api/attendance", require("./routes/attendanceRoutes"));
-app.use("/api/settings", require("./routes/settingsRoutes"));
+app.use("/api/attendance", require("./routes/attendance"));
+app.use("/api/settings", require("./routes/settings"));
 app.use("/api/debts", require("./routes/debtRoutes"));
-app.use("/api/addresses", require("./routes/addressRoutes"));
-<<<<<<< HEAD
-app.use("/api/payments", require("./routes/paymentRoutes"));
+app.use("/api/addresses", require("./routes/addresses"));
+app.use("/api/payments", require("./routes/payments"));
 app.use("/api/face", require("./routes/faceRoutes"));
-app.use("/api/assistant", require("./routes/assistantRoutes"));
-=======
-<<<<<<< HEAD
-app.use("/api/payments", require("./routes/paymentRoutes"));
-app.use("/api/face", require("./routes/faceRoutes"));
-app.use("/api/assistant", require("./routes/assistantRoutes"));
-=======
->>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
->>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
-
+app.use("/api/assistant", require("./routes/assistant"));
 app.get("/", (req, res) => {
   res.json({ success: true, message: "Internet-do'kon backend API ishlamoqda" });
 });
@@ -55,13 +45,6 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-<<<<<<< HEAD
-  require("./jobs/paymentExpiry").start(); // to'lanmagan onlayn buyurtmalarni avtomatik bekor qilish
-=======
-<<<<<<< HEAD
-  require("./jobs/paymentExpiry").start(); // to'lanmagan onlayn buyurtmalarni avtomatik bekor qilish
-=======
->>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
->>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
-  console.log(`Server ${PORT}-portda ishga tushdi`);
+    require("./jobs/paymentExpiry").start(); // to'lanmagan onlayn buyurtma
+    console.log(`Server ${PORT}-portda ishga tushdi`);
 });
