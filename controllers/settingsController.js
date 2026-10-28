@@ -32,7 +32,10 @@ const updateSettings = asyncHandler(async (req, res) => {
     "logoUrl",
     "deliveryRegions",
     "minOrderAmount",
+<<<<<<< HEAD
     "pickupAddress",
+=======
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
     "deliveryFee",
     "freeDeliveryFrom",
   ];

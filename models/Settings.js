@@ -20,7 +20,10 @@ const settingsSchema = new mongoose.Schema(
     // Yetkazib berish hududlari: faqat shu hududlarga buyurtma qabul qilinadi
     deliveryRegions: { type: [String], default: ["Toshkent"] },
     minOrderAmount: { type: Number, default: 0 },
+<<<<<<< HEAD
     pickupAddress: { type: String, default: "" }, // "o'zim olib ketaman" punkti manzili (bo'sh = o'chiq)
+=======
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
     deliveryFee: { type: Number, default: 0 }, // yetkazib berish haqi (so'm)
     freeDeliveryFrom: { type: Number, default: 0 }, // shu summadan oshsa yetkazish bepul (0 = o'chiq)
 

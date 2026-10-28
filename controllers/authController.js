@@ -30,8 +30,16 @@ const registerUser = asyncHandler(async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
+<<<<<<< HEAD
       phone: user.phone,
       avatar: user.avatar,
+=======
+<<<<<<< HEAD
+      phone: user.phone,
+      avatar: user.avatar,
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
       role: user.role,
     },
     token: generateToken(user._id),
@@ -62,8 +70,16 @@ const loginUser = asyncHandler(async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
+<<<<<<< HEAD
       phone: user.phone,
       avatar: user.avatar,
+=======
+<<<<<<< HEAD
+      phone: user.phone,
+      avatar: user.avatar,
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
       role: user.role,
     },
     token: generateToken(user._id),
@@ -131,7 +147,14 @@ const googleAuth = asyncHandler(async (req, res) => {
       id: user._id,
       name: user.name,
       email: user.email,
+<<<<<<< HEAD
       phone: user.phone,
+=======
+<<<<<<< HEAD
+      phone: user.phone,
+=======
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
       avatar: user.avatar,
       role: user.role,
     },
@@ -146,6 +169,10 @@ const getMe = asyncHandler(async (req, res) => {
   res.json({ success: true, user: req.user });
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
 // @desc    Profilni yangilash (ism, telefon, rasm)
 // @route   PATCH /api/auth/profile
 // @access  Private
@@ -209,3 +236,9 @@ const changePassword = asyncHandler(async (req, res) => {
 });
 
 module.exports = { registerUser, loginUser, googleAuth, getMe, updateProfile, changePassword };
+<<<<<<< HEAD
+=======
+=======
+module.exports = { registerUser, loginUser, googleAuth, getMe };
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d

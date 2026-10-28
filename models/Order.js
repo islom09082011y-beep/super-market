@@ -28,7 +28,10 @@ const historySchema = new mongoose.Schema(
 const orderSchema = new mongoose.Schema(
   {
     orderNumber: { type: String, unique: true, sparse: true }, // SE-000123
+<<<<<<< HEAD
     deliveryType: { type: String, enum: ["kuryer", "olib_ketish"], default: "kuryer" },
+=======
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
@@ -66,6 +69,10 @@ const orderSchema = new mongoose.Schema(
       slot: { type: String, default: "" }, // 09:00-12:00 ...
     },
     statusHistory: { type: [historySchema], default: [] },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
     cancelledBy: { type: String, enum: ["", "customer", "staff", "system"], default: "" },
     staffNote: { type: String, default: "", maxlength: 500 }, // faqat xodimlar ko'radi
     isUrgent: { type: Boolean, default: false },
@@ -73,6 +80,12 @@ const orderSchema = new mongoose.Schema(
     paymentProvider: { type: String, enum: ["", "click", "payme", "sandbox", "manual"], default: "" },
     paidAt: { type: Date, default: null },
     paymentExpiresAt: { type: Date, default: null }, // onlayn to'lov kutish muddati
+<<<<<<< HEAD
+=======
+=======
+    cancelledBy: { type: String, enum: ["", "customer", "staff"], default: "" },
+>>>>>>> bc9ae5889c64d5cf0633056236dfd6089059bec4
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
     paymentMethod: {
       type: String,
       enum: ["naqd", "karta", "click", "payme", "nasiya"],

@@ -23,10 +23,13 @@ const STATUS_LABELS = {
   yetkazildi: "Yetkazildi",
   bekor_qilindi: "Bekor qilindi",
 };
+<<<<<<< HEAD
 // Olib ketish buyurtmasida kuryer bosqichi yo'q: "Yig'ilmoqda" dan to'g'ridan-to'g'ri "Topshirildi"ga o'tadi
 const allowedNext = (order) =>
   order.deliveryType === "olib_ketish" && order.status === "yigilmoqda" ? ["yetkazildi"] : TRANSITIONS[order.status] || [];
 
+=======
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
 const COURIER_ALLOWED_FROM = ["yigilmoqda", "yetkazilmoqda"];
 const ONLINE_METHODS = ["karta", "click", "payme"];
 
@@ -67,7 +70,11 @@ const transitionOrder = async (res, order, status, user, courierId) => {
   if (status === "bekor_qilindi") {
     fail(res, 400, "Buyurtmani bekor qilish uchun \"Bekor qilish\" amalidan foydalaning (ombor qoldig'i qaytariladi)");
   }
+<<<<<<< HEAD
   if (!allowedNext(order).includes(status)) {
+=======
+  if (!(TRANSITIONS[order.status] || []).includes(status)) {
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
     fail(res, 400, `"${STATUS_LABELS[order.status]}" holatidan "${STATUS_LABELS[status]}" holatiga o'tib bo'lmaydi`);
   }
   if (status === "tasdiqlandi" && ONLINE_METHODS.includes(order.paymentMethod) && !order.isPaid) {
@@ -122,7 +129,10 @@ module.exports = {
   STATUS_LABELS,
   COURIER_ALLOWED_FROM,
   ONLINE_METHODS,
+<<<<<<< HEAD
   allowedNext,
+=======
+>>>>>>> 2f79ba3b949036a4de3f3984e476c8f33106449d
   restock,
   releaseCoupon,
   cancelOrderCore,
